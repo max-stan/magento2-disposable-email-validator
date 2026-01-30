@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <!-- Interface preference -->
+    <preference for="MaxStan\DisposableEmailValidator\Api\DisposableEmailValidatorInterface"
+                type="MaxStan\DisposableEmailValidator\Model\DisposableEmailValidator"/>
+
+    <!-- Customer registration validation plugin -->
+    <type name="Magento\Customer\Api\AccountManagementInterface">
+        <plugin name="maxstan_disposable_email_customer_registration"
+                type="MaxStan\DisposableEmailValidator\Plugin\CustomerAccountManagementPlugin"
+                sortOrder="10"/>
+    </type>
+
+    <!-- Newsletter subscription validation plugin -->
+    <type name="Magento\Newsletter\Model\SubscriptionManagerInterface">
+        <plugin name="maxstan_disposable_email_newsletter_subscription"
+                type="MaxStan\DisposableEmailValidator\Plugin\NewsletterSubscriptionManagerPlugin"
+                sortOrder="10"/>
+    </type>
+
+</config>

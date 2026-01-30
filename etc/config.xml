@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <customer>
+            <disposable_email_validator>
+                <validate_customer_registration>0</validate_customer_registration>
+                <validate_newsletter>0</validate_newsletter>
+                <blocked_domains />
+                <allowed_domains />
+            </disposable_email_validator>
+        </customer>
+    </default>
+</config>
