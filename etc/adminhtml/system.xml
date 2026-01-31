@@ -12,12 +12,6 @@
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     <comment>Block disposable emails during customer account creation.</comment>
                 </field>
-                <field id="validate_newsletter" translate="label comment" type="select" sortOrder="20"
-                       showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
-                    <label>Validate Newsletter Subscription</label>
-                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                    <comment>Block disposable emails during newsletter subscription.</comment>
-                </field>
                 <field id="blocked_domains" translate="label comment" type="textarea" sortOrder="30"
                        showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Blocked Domains</label>
