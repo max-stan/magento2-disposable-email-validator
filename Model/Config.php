@@ -13,7 +13,6 @@ use Magento\Store\Model\ScopeInterface;
 readonly class Config
 {
     private const string XML_PATH_VALIDATE_CUSTOMER = 'customer/disposable_email_validator/validate_customer_registration';
-    private const string XML_PATH_VALIDATE_NEWSLETTER = 'customer/disposable_email_validator/validate_newsletter';
     private const string XML_PATH_BLOCKED_DOMAINS = 'customer/disposable_email_validator/blocked_domains';
     private const string XML_PATH_ALLOWED_DOMAINS = 'customer/disposable_email_validator/allowed_domains';
 
@@ -29,18 +28,6 @@ readonly class Config
     {
         return $this->scopeConfig->isSetFlag(
             self::XML_PATH_VALIDATE_CUSTOMER,
-            ScopeInterface::SCOPE_STORE,
-            $storeId
-        );
-    }
-
-    /**
-     * Check if newsletter subscription validation is enabled.
-     */
-    public function isNewsletterValidationEnabled(?int $storeId = null): bool
-    {
-        return $this->scopeConfig->isSetFlag(
-            self::XML_PATH_VALIDATE_NEWSLETTER,
             ScopeInterface::SCOPE_STORE,
             $storeId
         );

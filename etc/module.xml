@@ -4,7 +4,6 @@
     <module name="MaxStan_DisposableEmailValidator">
         <sequence>
             <module name="Magento_Customer"/>
-            <module name="Magento_Newsletter"/>
         </sequence>
     </module>
 </config>
