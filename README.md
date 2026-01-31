@@ -38,7 +38,7 @@ bin/magento setup:di:compile
 ## Magento Compatibility
 
 - Magento 2.4.x
-- PHP 8.1+
+- PHP 8.2+
 
 ## Contributing
 
